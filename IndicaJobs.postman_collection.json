@@ -1,0 +1,291 @@
+{
+	"info": {
+		"_postman_id": "b418babf-e0e0-47c2-9a32-2089c4a49f4e",
+		"name": "IndicaJobs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Post idTema1  Solicitação",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tituloTema\":\"Solicitação\",\r\n    \"descricaoTema\":\"As empresas irão solicitar indicações de usuários para as vagas em aberto.\",\r\n    \"palavraChave\":\"#vagas, #oportunidade,#vendas, #caixa\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/temas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"temas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post idTema2 Indicação",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tituloTema\":\"Indicação\",\r\n    \"descricaoTema\":\"Usuários vão indicar outros usuários para as vagas\",\r\n    \"palavraChave\":\"#vagas, #oportunidade,#vendas, #caixa\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/temas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"temas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post idTema3 Informação",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tituloTema\":\"Informação\",\r\n    \"descricaoTema\":\"Usuários e empresas poderão postar informações que se encaixem com a plataforma.\",\r\n    \"palavraChave\":\"#informações, #experiência, #contratado\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/temas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"temas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get do Tema",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/temas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"temas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get do Tema",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idTema\":3,\r\n    \"tituloTema\":\"Informação\",\r\n    \"descricaoTema\":\"Usuários e empresas poderão postar informações atreladas a plataforma.\",\r\n    \"palavraChave\":\"#informações, #experiência, #contratado\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/temas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"temas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Postagem1 relacionando com tema",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tituloPost\": \"Renner contrata\",\r\n    \"textoPost\": \"Renner abre vagas para vendedores e caixas. Nº vagas: 6.\",\r\n    \"palavraChavePost\": \"#vagas, #oportunidade, #caixa, #vendas\",\r\n    \"tema\":\r\n    {\r\n        \"idTema\":1\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/postagens",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"postagens"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Postagem2 relacionando com temaIndicação",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tituloPost\": \"Indico candidato\",\r\n    \"textoPost\": \"Indico Jubileu para a vaga de caixa na Renner. Segue currículo do candidato.\",\r\n    \"palavraChavePost\": \"#vagas, #oportunidade, #caixa, #vendas\",\r\n    \"tema\":\r\n    {\r\n        \"idTema\":2\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/postagens",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"postagens"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Postagem3 relacionando com TemaInformação",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tituloPost\": \"Dia de realização\",\r\n    \"textoPost\": \"Oi, meu nome é Jubileu e hoje estou fazendo o meu primeiro post na plataforma para agradecer a Renner e ao colaborador que me indicou pela oportunidade de esta trabalhando como vendedor nessa empresa. A partir de hoje, farei por outros o que fizeram por mim e utilizarei a plataforma para ajudar outras pessoas a conseguirem a assinatura na sua carteira trabalho. Estou muito feliz e realizado!\",\r\n    \"palavraChavePost\": \"#felicidade, #contratado, #CLT, #oportunidade, #gratidão\",\r\n    \"tema\": {\r\n        \"idTema\": 3\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/postagens",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"postagens"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get da Postagem",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/postagens",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"postagens"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Put da Postagem3 mudança de título",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idPost\":3,\r\n    \"tituloPost\": \"Primeiro contato com o IndicaJobs\",\r\n    \"textoPost\": \"Oi, meu nome é Jubileu e hoje estou fazendo o meu primeiro post na plataforma para agradecer a Renner e ao colaborador que me indicou pela oportunidade de esta trabalhando como vendedor nessa empresa. A partir de hoje, farei por outros o que fizeram por mim e utilizarei a plataforma para ajudar outras pessoas a conseguirem a assinatura na sua carteira trabalho. Estou muito feliz e realizado!\",\r\n    \"palavraChavePost\": \"#felicidade, #contratado, #CLT, #oportunidade, #gratidão\",\r\n    \"tema\": {\r\n        \"idTema\": 3\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/postagens",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"postagens"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deletando postagem 1",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/postagens/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"postagens",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
