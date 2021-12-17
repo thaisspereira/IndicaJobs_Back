@@ -1,5 +1,10 @@
 #  Projeto Integrador - Indica Job´s 
 
+<h1 align="center">
+    <a href="https://imgur.com/NJ7vLsY"><img src="https://i.imgur.com/NJ7vLsY.jpg" title="source: imgur.com" /></a>
+</h1>
+
+<h4 align="center"> 
 
 ## 💻 Sobre o projeto
 
